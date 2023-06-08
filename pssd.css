@@ -1,0 +1,39 @@
+body{
+    background: rgb(6,0,0);
+    background: linear-gradient(50deg, rgba(6,0,0,0.9921218487394958) 0%, rgba(85,45,45,1) 32%, rgba(6,0,0,1) 100%);
+}
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 200px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.navbar a{
+    display: inline-block;
+    padding: 40px;
+    font-size: larger;
+    color: rgb(20, 0, 20);
+    transition: .3s;
+    font-weight: 500;
+    text-decoration: none;
+    text-shadow: 3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar a:hover{
+    color:turquoise;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    background: url(https://i.ibb.co/thTPcZY/r.jpg) no-repeat;
+    background-position: right; 
+      
+   
+}
