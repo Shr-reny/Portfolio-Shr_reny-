@@ -1,6 +1,5 @@
 body{
-    background: rgb(6,0,0);
-    background: linear-gradient(50deg, rgba(6,0,0,0.9921218487394958) 0%, rgba(85,45,45,1) 32%, rgba(6,0,0,1) 100%);
+    background-color: black;
 }
 .header{
     position: fixed;
@@ -16,24 +15,133 @@ body{
 }
 .navbar a{
     display: inline-block;
-    padding: 40px;
-    font-size: larger;
-    color: rgb(20, 0, 20);
+    padding: 50px 90px 80px 90px;
+    font-size: 30px;
+    color: rgb(59, 59, 59);
     transition: .3s;
     font-weight: 500;
     text-decoration: none;
     text-shadow: 3em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
 }
 .navbar a:hover{
-    color:turquoise;
+    color:rgba(255, 235, 205, 0.74);
 }
 .home{
     position: relative;
-    width: 100%;
+    width: 96%;
     justify-content: space-between;
-    background: url(https://i.ibb.co/thTPcZY/r.jpg) no-repeat;
-    background-position: right; 
-      
-   
+    background: url('ssr.png') no-repeat;
+    background-position: center; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 30px;  
+}
+.home-content{
+    max-width: 650px;
+    color: rgba(255, 235, 205, 0.747);
+    padding-left: 60px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 800;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .6s;
+}
+.home-content h1{
+    font-size: 50px;
+    font-weight: 800;
+    margin-top: 2px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .4s;
+}
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .9s;
+}
+.home-content h4{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .6s;
+}
+.home-content h3 span{
+    color:rgb(167, 117, 81);
+    text-shadow: cornsilk;
+}
+.home-sci a{
+    color: blanchedalmond;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    width:40px;
+    height: 40px;
+    border: 3px solid gray;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 20px 15px 30px 0;
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .6s;
+}
+.home-sci a:hover{
+    background:gray;
+    color:rgb(8, 0, 8);
+    box-shadow: 0 0 50px gray;
+}
+.about-content h3{
+    color: rgb(167, 117, 81);
+}
+.about{
+    color: blanchedalmond;
+    font-size: 32px;
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
